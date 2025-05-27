@@ -51,13 +51,11 @@ scanf("%d", &buscar);
 for(i=0; i<tam; i++){
     if(calificaciones[i] == buscar){
         encontrado=1;
-        calificaciones[i] = posicion;
+        printf("La calificacion se encuentra en la posicion: %d\n", i);
     }
 }
 
-if(encontrado==1){
-    printf("La calificacion se encuentra en la posicion: %d\n", posicion);
-} else if(!encontrado){
+if(encontrado!=1){
     printf("No esta esa calificacion");
 }
 
