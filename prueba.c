@@ -45,17 +45,18 @@ for(i=0; i<tam; i++){
 }
 
 //para buscar
-int buscar, encontrado=0;
+int buscar, encontrado=0, posicion=0;
 printf("\n\nIngresa la calificacion a buscar:");
 scanf("%d", &buscar);
 for(i=0; i<tam; i++){
     if(calificaciones[i] == buscar){
         encontrado=1;
+        calificaciones[i] = posicion;
     }
 }
 
 if(encontrado==1){
-    printf("La calificacion se encuentra en la posicion: %d\n", i);
+    printf("La calificacion se encuentra en la posicion: %d\n", posicion);
 } else if(!encontrado){
     printf("No esta esa calificacion");
 }
