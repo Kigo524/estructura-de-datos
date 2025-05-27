@@ -50,11 +50,14 @@ printf("\n\nIngresa la calificacion a buscar:");
 scanf("%d", &buscar);
 for(i=0; i<tam; i++){
     if(calificaciones[i] == buscar){
-        printf("La calificacion se encuentra en la posicion: %d\n", i);
         encontrado=1;
-    } else if(!encontrado){
-        printf("No esta esa calificacion");
     }
+}
+
+if(encontrado==1){
+    printf("La calificacion se encuentra en la posicion: %d\n", i);
+} else if(!encontrado){
+    printf("No esta esa calificacion");
 }
 
 return 0;
