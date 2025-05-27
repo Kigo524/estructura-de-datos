@@ -48,12 +48,13 @@ for(i=0; i<tam; i++){
 int buscar, encontrado=0;
 printf("\n\nIngresa la calificacion a buscar:");
 scanf("%d", &buscar);
-
-if(calificaciones[i] == buscar){
-    printf("La calificacion se encuentra en la posicion: %d\n", i);
-    encontrado=1;
-} else if(!encontrado){
-    printf("No esta esa calificacion");
+for(i=0; i<tam; i++){
+    if(calificaciones[i] == buscar){
+        printf("La calificacion se encuentra en la posicion: %d\n", i);
+        encontrado=1;
+    } else if(!encontrado){
+        printf("No esta esa calificacion");
+    }
 }
 
 return 0;
