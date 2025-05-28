@@ -16,11 +16,31 @@ void initialize(Pila *pila) {
     pila->tope = -1;  
 }
 
+//comenzamos con verificar que la pila esta vacia. Devuelve valor booleano
+bool isEmpty(Pila *pila){
+    if(pila -> tope == -1){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//isfull verifica que este llena la pila de modo que tope este en MAX. devuelve bool
+bool isFull (Pila *pila){
+    if(pila->tope == MAX -1){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//push (pila, valor) agrega un valor en pila
+
 
 int main() {
     Pila pila;
 
-    initialize(&pila);  
+    initialize(&pila);
 
     return 0;
 }
