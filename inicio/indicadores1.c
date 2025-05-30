@@ -36,12 +36,13 @@ bool isFull (Pila *pila){
 
 //push (pila, valor) agrega un valor en pila
 void push(Pila *pila, int valor) {
-    
+    int flag=0; //agrego una bandera para comuicarlo internamente
     if (pila->tope == MAX - 1) {
         printf("La pila está llena.\n");
     } else {
         pila->tope++;
         pila->arreglo[pila->tope]=valor;
+        flag=1; //que marque 1 si realiza la accion de agregar
     }
     printf("Elemento %d agregado a la pila.\n", valor);//se escribe afuera del else
 }
