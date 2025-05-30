@@ -8,17 +8,18 @@ despues crear un ciclo para vaciar la pila*/
 
 int main(){
 
-    int tamano=0, cont=0, i=0;
-    int datos[tamano];
+    int i, tamano, cont=0;
+    int datos[cont];
 
-    srand(time(NULL));
-    tamano = 1 + rand() % (20); //de 1 a 20
+    srand(time(0));
+    tamano = 1 + (rand() % 20); //de 1 a 20
 
     do{
-        srand(time(NULL));
-        cont++;
-        datos[cont] = 1 + rand() % 20;
-    }while(tamano!=datos[cont]);
+        if(cont<tamano){
+            datos[cont] = (rand() % 20);
+            cont++;
+        }
+    }while(cont<tamano);
 
     for(i=0; i<tamano; i++){
         printf("%d", datos[i]);
