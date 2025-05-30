@@ -35,7 +35,7 @@ bool isFull (Pila *pila){
 }
 
 //push (pila, valor) agrega un valor en pila
-
+int push(Pila *p
 
 int main() {
     Pila pila;
