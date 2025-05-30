@@ -35,7 +35,15 @@ bool isFull (Pila *pila){
 }
 
 //push (pila, valor) agrega un valor en pila
-int push(Pila *p
+void push(Pila *pila, int valor) {
+    if (pila->tope == MAX - 1) {
+        printf("La pila está llena.\n");
+    } else {
+        pila->tope++;
+        pila->arreglo[pila->tope] = arreglo;
+        printf("Elemento %d agregado a la pila.\n", valor);
+    }
+}
 
 int main() {
     Pila pila;
