@@ -20,7 +20,7 @@ void initialize(Fila *fila) {
 
 int estaVacia(Fila *fila) {
     if(fila->frente==fila->atras-1){
-        return; //devuelve 1 si la fila y atras van contiguas
+        return true; //devuelve 1 si la fila y atras van contiguas
     }
 }
 
@@ -49,8 +49,12 @@ void dequeue(Fila *fila, int valor){
     }
 }
 
-void verTope(Fila *fila){
-    if(estaVacia(fila))
+void peek(Fila *fila){
+    if(estaVacia(fila)){
+        printf("La fila esta vacia\n");
+    } else {
+        printf("Elemnto en el tope: %d\n", fila->arreglo[fila->atras]);
+    }
 }
 
 int main() {
@@ -58,6 +62,11 @@ int main() {
 
     initialize(&f);
 
+    estaVacia(&f);
+    enqueue(&f, 10);
+    enqueue(&f, 20);
+    enqueue(&f, 30);
+    peek(&f); //saldria 10
 
     return 0;
 }
