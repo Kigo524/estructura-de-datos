@@ -55,17 +55,41 @@ void peek(Fila *fila){
     }
 }
 
+-------------------------------------------------------------------------
+//esto es solo para poder ver los cambios
+void imprimirFila(Fila *fila){
+    if (estaVacia(fila)){
+        printf("Fila vacia\n");
+    } else {
+        printf("Fila: ");
+        for (int i = fila->frente + 1; i < fila->atras; i++){
+            printf("%d ", fila->arreglo[i]);
+        }
+        printf("\n");
+    }
+}
+-------------------------------------------------------------------------
+
 int main() {
     Fila f;
 
     initialize(&f);
 
     estaVacia(&f);
+
     enqueue(&f, 10);
+    imprimirFila(&f);
+
     enqueue(&f, 20);
+    imprimirFila(&f);
+
     enqueue(&f, 30);
+    imprimirFila(&f);
+
     peek(&f); //saldria 10
     dequeue(&f);
+    imprimirFila(&f);
+    
     peek(&f); //saldria 20
 
     return 0;
