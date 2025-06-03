@@ -55,14 +55,34 @@ void verTope(Pila *p){
     }
 }
 
+//---------------------------------------------------------------
+void imprimirPila(Pila *p){
+    if(estaVacia(p)){
+        printf("Pila vacia\n");
+    } else {
+        printf("Pila: ");
+        for(int i=0; i<=p->tope; i++){
+            printf("%d ", p->arreglo[i]);
+        }
+        printf("\n");
+    }
+}
+//---------------------------------------------------------------
+
 int main(){
     Pila miPila;
     inicializar(&miPila); //se pasa la direccion porque la funcion espera un puntero
 
     push(&miPila, 10);
+    imprimirPila(&miPila);
+
     push(&miPila, 20);
+    imprimirPila(&miPila);
+
     verTope(&miPila); //seria 20
     pop(&miPila); //elimina el 20
+    imprimirPila(&miPila);
+    
     verTope(&miPila); //seria 10
 
     return 0;
