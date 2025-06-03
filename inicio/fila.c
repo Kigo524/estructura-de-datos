@@ -19,9 +19,7 @@ void initialize(Fila *fila) {
 }
 
 int estaVacia(Fila *fila) {
-    if(fila->frente==fila->atras-1){
-        return true; //devuelve 1 si la fila y atras van contiguas
-    }
+    return fila->frente == fila->atras - 1; //devuelve 1 si la fila y atras van contiguas
 }
 
 int estaLlena(Fila *fila){
@@ -40,7 +38,7 @@ void enqueue(Fila *fila, int valor){
 }
 
 //esto es un pop
-void dequeue(Fila *fila, int valor){
+void dequeue(Fila *fila){
     if(estaVacia(fila)){
         printf("La fila esta vacia\n");
     } else {
@@ -67,6 +65,8 @@ int main() {
     enqueue(&f, 20);
     enqueue(&f, 30);
     peek(&f); //saldria 10
+    dequeue(&f);
+    peek(&f); //saldria 20
 
     return 0;
 }
