@@ -55,7 +55,7 @@ void peek(Fila *fila){
     }
 }
 
--------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 //esto es solo para poder ver los cambios
 void imprimirFila(Fila *fila){
     if (estaVacia(fila)){
@@ -68,7 +68,7 @@ void imprimirFila(Fila *fila){
         printf("\n");
     }
 }
--------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 
 int main() {
     Fila f;
@@ -89,7 +89,7 @@ int main() {
     peek(&f); //saldria 10
     dequeue(&f);
     imprimirFila(&f);
-    
+
     peek(&f); //saldria 20
 
     return 0;
