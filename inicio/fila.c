@@ -42,7 +42,7 @@ void dequeue(Fila *fila){
     if(estaVacia(fila)){
         printf("La fila esta vacia\n");
     } else {
-        printf("Elemento %d eliminado\n", fila->arreglo[fila->frente]);
+        printf("Elemento %d eliminado\n", fila->arreglo[fila->frente + 1]);
         fila->frente++; //sube la posicion del frente segun se va pasando el valor
     }
 }
@@ -51,7 +51,7 @@ void peek(Fila *fila){
     if(estaVacia(fila)){
         printf("La fila esta vacia\n");
     } else {
-        printf("Elemnto en el tope: %d\n", fila->arreglo[fila->atras]);
+        printf("Elemnto en el tope: %d\n", fila->arreglo[fila->frente + 1]);
     }
 }
 
