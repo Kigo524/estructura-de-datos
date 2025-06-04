@@ -1,3 +1,4 @@
+//Ejercicio 1: Dirección y desreferenciación
 #include <stdio.h>
 
 int main() {
@@ -15,3 +16,6 @@ int main() {
 
     return 0;
 }
+//Usa &a para guardar la dirección de a en ptr.
+
+//Imprime la dirección con %p y el valor con *ptr
