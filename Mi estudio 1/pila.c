@@ -34,12 +34,33 @@ void verTope() {
     }
 }
 
+//--------------------------------------------------------
+// Función para imprimir la pila
+void imprimirPila() {
+    if (tope == -1) {
+        printf("Pila vacía\n");
+    } else {
+        printf("Pila: ");
+        for (int i = 0; i <= tope; i++) {
+            printf("%d ", pila[i]);
+        }
+        printf("\n");
+    }
+}
+//--------------------------------------------------------
+
 // Función principal
 int main() {
     push(10);
+    imprimirPila();
+
     push(20);
+    imprimirPila();
+
     verTope();  // Debería mostrar 20
     pop();      // Elimina 20
+    imprimirPila();
+    
     verTope();  // Ahora debería mostrar 10
     return 0;
 }
