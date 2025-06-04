@@ -7,7 +7,7 @@ int rear = -1;
 
 // Verifica si la fila está vacía
 int isEmpty() {
-    return front > rear;
+    return front = rear -1; // para que esten juntos **** verificar
 }
 
 // Verifica si la fila está llena
