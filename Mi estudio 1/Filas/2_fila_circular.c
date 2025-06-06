@@ -76,8 +76,10 @@ int main() {
     enqueue(20);
     enqueue(30);
     enqueue(40);
+    printQueue();// Ver la fila con los primeros datos
     dequeue(); // Elimina 10
     dequeue(); // Elimina 20
+    printQueue();// Ver las fila despues del dequeue
     enqueue(50);
     enqueue(60); // Ocupa el espacio del principio
     enqueue(70); // Fila llena (ya no hay espacio)
