@@ -96,14 +96,17 @@ int main() {
     enqueue(&q, 20);     // Agregamos 20
     enqueue(&q, 30);     // Agregamos 30
     enqueue(&q, 40);     // Agregamos 40
+    printQueue(&q);
 
     dequeue(&q);         // Quitamos el 10
     dequeue(&q);         // Quitamos el 20
+    printQueue(&q);
 
     enqueue(&q, 50);     // Agregamos 50 (reutilizando espacio)
     enqueue(&q, 60);     // Agregamos 60 (ciclo circular)
+    enqueue(&q, 70);     // Agregamos 70
 
-    enqueue(&q, 70);     // Ya está llena, no se puede agregar
+    enqueue(&q, 80);     // Ya está llena, no se puede agregar
 
     printQueue(&q);      // Mostramos la fila actual
 
