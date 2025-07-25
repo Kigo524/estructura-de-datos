@@ -84,7 +84,7 @@ Nodo* insertar(Nodo* raiz, int valor) {
     // Si el árbol está vacío, el nuevo nodo será la raíz
     if (raiz == NULL) return nuevo;
 
-    // Usamos una cola para recorrer el árbol por niveles
+    // Una cola para recorrer el árbol por niveles
     Cola* c = crearCola();
     encolar(c, raiz);
 
@@ -182,7 +182,14 @@ void mostrarArbol(Nodo* raiz, int nivel) {
 
     mostrarArbol(raiz->derecho, nivel + 1);
 
-    for (int i = 0; i < nivel; i++) printf("   ");
+    //for (int i = 0; i < nivel; i++) printf("   ");
+    //printf("%d\n", raiz->dato);
+
+    int i = 0;
+    while (i < nivel){
+        printf("    ");
+        i++;
+    }
     printf("%d\n", raiz->dato);
 
     mostrarArbol(raiz->izquierdo, nivel + 1);
