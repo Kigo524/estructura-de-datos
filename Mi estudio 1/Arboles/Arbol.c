@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// ------------------- ESTRUCTURAS -------------------
+// ---ESTRUCTURA---
 
 // Estructura del nodo del árbol binario
 typedef struct Nodo {
@@ -22,7 +22,7 @@ typedef struct {
     NodoCola* final;
 } Cola;
 
-// ------------------- FUNCIONES DE COLA -------------------
+// ---COLA---
 
 // Crea una cola vacía
 Cola* crearCola() {
@@ -66,7 +66,7 @@ bool colaVacia(Cola* c) {
     return c->frente == NULL;
 }
 
-// ------------------- FUNCIONES DEL ÁRBOL -------------------
+// ---ARBOL---
 
 // Crea un nuevo nodo del árbol con un valor
 Nodo* crearNodo(int valor) {
