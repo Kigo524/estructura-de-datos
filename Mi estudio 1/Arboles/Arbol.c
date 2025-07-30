@@ -215,6 +215,8 @@ int main() {
     arbol = insertar(arbol, 30);
     arbol = insertar(arbol, 40);
     arbol = insertar(arbol, 50);
+    arbol = insertar(arbol, 85);
+    arbol = insertar(arbol, 15);
 
     printf("Árbol después de insertar:\n");
     mostrarArbol(arbol, 0);
@@ -222,6 +224,12 @@ int main() {
     // Eliminar un nodo específico
     printf("\nEliminando el nodo con valor 20...\n");
     arbol = eliminar(arbol, 20);
+
+    printf("Árbol después de eliminar:\n");
+    mostrarArbol(arbol, 0);
+
+    printf("\nEliminando el nodo con valor 85...\n");
+    arbol = eliminar(arbol, 85);
 
     printf("Árbol después de eliminar:\n");
     mostrarArbol(arbol, 0);
